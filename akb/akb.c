@@ -377,6 +377,12 @@ static UINT OnKeyDown(DWORD vkCode)
 		case VK_F12  : return Fire(config.Fn.F12  );
 		}
 	}
+	else {
+		switch (vkCode) {
+		case 0x1A: return Fire(config.Key.Alnum);
+		case 0x16: return Fire(config.Key.Kana);
+		}
+	}
 	return FALL_THROUGH;
 }
 
